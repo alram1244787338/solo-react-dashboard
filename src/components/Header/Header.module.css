@@ -1,0 +1,63 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--color-bg-header);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-lg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-sm);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.breadcrumbItem {
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+}
+
+.breadcrumbActive {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.separator {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-base);
+}
+
+.user:hover {
+  background-color: var(--color-bg);
+}
+
+.avatar {
+  font-size: var(--font-size-lg);
+}
+
+.username {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}

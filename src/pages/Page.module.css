@@ -1,0 +1,30 @@
+.page {
+  background-color: var(--color-bg-content);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  min-height: 400px;
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.placeholder {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+}
