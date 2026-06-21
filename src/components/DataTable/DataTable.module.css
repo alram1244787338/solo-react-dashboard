@@ -56,18 +56,18 @@
 }
 
 .success {
-  background-color: rgba(82, 196, 26, 0.12);
-  color: var(--color-success);
+  background-color: var(--badge-success-bg);
+  color: var(--badge-success-text);
 }
 
 .danger {
-  background-color: rgba(255, 77, 79, 0.12);
-  color: var(--color-danger);
+  background-color: var(--badge-danger-bg);
+  color: var(--badge-danger-text);
 }
 
 .warning {
-  background-color: rgba(250, 173, 20, 0.12);
-  color: var(--color-warning);
+  background-color: var(--badge-warning-bg);
+  color: var(--badge-warning-text);
 }
 
 .empty {

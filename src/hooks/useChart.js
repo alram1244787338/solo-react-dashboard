@@ -87,9 +87,18 @@ function useChart({ labels = [], data = [], height = 320, padding = { top: 30, r
   useEffect(() => {
     draw();
 
-    const handleResize = () => draw();
+    let timer = null;
+    const handleResize = () => {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        draw();
+      }, 200);
+    };
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (timer) clearTimeout(timer);
+    };
   }, [draw]);
 
   return { canvasRef, containerRef };
