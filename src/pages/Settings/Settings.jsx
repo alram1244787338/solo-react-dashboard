@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useSettingsForm from '../../hooks/useSettingsForm';
 import styles from './Settings.module.css';
 
 const themeOptions = [
@@ -8,26 +9,7 @@ const themeOptions = [
 ];
 
 function Settings() {
-  const [formData, setFormData] = useState({
-    theme: 'light',
-    displayName: '管理员',
-  });
-  const [saved, setSaved] = useState(false);
-
-  const handleChange = (key, value) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-    setSaved(false);
-  };
-
-  const handleSave = (e) => {
-    e.preventDefault();
-    setSaved(true);
-  };
-
-  const handleReset = () => {
-    setFormData({ theme: 'light', displayName: '管理员' });
-    setSaved(false);
-  };
+  const { formData, saved, handleChange, handleSave, handleReset } = useSettingsForm();
 
   return (
     <div className={styles.page}>

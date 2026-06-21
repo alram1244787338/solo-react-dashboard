@@ -1,9 +1,10 @@
 import React from 'react';
+import { formatChange, getChangeSign } from '../../utils/format';
 import styles from './MetricCard.module.css';
 
 function MetricCard({ title, value, change, prefix = '', suffix = '', icon = '📊' }) {
-  const isPositive = change >= 0;
-  const changeSign = isPositive ? '+' : '';
+  const signClass = getChangeSign(change);
+  const isPositive = signClass === 'positive';
 
   return (
     <div className={styles.card}>
@@ -15,9 +16,9 @@ function MetricCard({ title, value, change, prefix = '', suffix = '', icon = '�
           {value}
           {suffix}
         </div>
-        <div className={`${styles.change} ${isPositive ? styles.positive : styles.negative}`}>
+        <div className={`${styles.change} ${styles[signClass]}`}>
           <span className={styles.arrow}>{isPositive ? '↑' : '↓'}</span>
-          <span className={styles.percent}>{changeSign}{Math.abs(change)}%</span>
+          <span className={styles.percent}>{formatChange(change)}</span>
           <span className={styles.label}>环比</span>
         </div>
       </div>
