@@ -1,0 +1,92 @@
+export const tableData = [
+  {
+    id: 1,
+    name: '张伟',
+    department: '技术部',
+    status: '在职',
+    date: '2025-03-15',
+  },
+  {
+    id: 2,
+    name: '李娜',
+    department: '产品部',
+    status: '在职',
+    date: '2025-04-02',
+  },
+  {
+    id: 3,
+    name: '王强',
+    department: '市场部',
+    status: '离职',
+    date: '2025-01-20',
+  },
+  {
+    id: 4,
+    name: '刘洋',
+    department: '技术部',
+    status: '在职',
+    date: '2025-05-08',
+  },
+  {
+    id: 5,
+    name: '陈静',
+    department: '财务部',
+    status: '休假',
+    date: '2025-02-11',
+  },
+  {
+    id: 6,
+    name: '杨帆',
+    department: '运营部',
+    status: '在职',
+    date: '2025-04-18',
+  },
+  {
+    id: 7,
+    name: '赵磊',
+    department: '技术部',
+    status: '在职',
+    date: '2025-03-29',
+  },
+  {
+    id: 8,
+    name: '黄丽',
+    department: '人力资源',
+    status: '在职',
+    date: '2025-01-05',
+  },
+  {
+    id: 9,
+    name: '周涛',
+    department: '产品部',
+    status: '离职',
+    date: '2025-02-25',
+  },
+  {
+    id: 10,
+    name: '吴敏',
+    department: '技术部',
+    status: '在职',
+    date: '2025-05-19',
+  },
+  {
+    id: 11,
+    name: '郑浩',
+    department: '市场部',
+    status: '在职',
+    date: '2025-04-07',
+  },
+  {
+    id: 12,
+    name: '孙悦',
+    department: '运营部',
+    status: '休假',
+    date: '2025-03-12',
+  },
+];
+
+export const statusColorMap = {
+  在职: 'success',
+  离职: 'danger',
+  休假: 'warning',
+};

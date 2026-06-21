@@ -1,16 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { getBreadcrumbByPath } from '../../config/routes';
 import styles from './Header.module.css';
-
-const breadcrumbMap = {
-  '/': [{ label: '首页' }, { label: '概览' }],
-  '/table': [{ label: '首页' }, { label: '数据表格' }],
-  '/settings': [{ label: '首页' }, { label: '系统设置' }],
-};
 
 function Header() {
   const location = useLocation();
-  const breadcrumbs = breadcrumbMap[location.pathname] || [{ label: '首页' }];
+  const breadcrumbs = getBreadcrumbByPath(location.pathname);
 
   return (
     <header className={styles.header}>

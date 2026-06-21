@@ -1,12 +1,28 @@
 import React from 'react';
-import styles from '../Page.module.css';
+import MetricCard from '../../components/MetricCard/MetricCard';
+import BarChart from '../../components/BarChart/BarChart';
+import { metricCards, visitTrend } from '../../data/metrics';
+import styles from './Overview.module.css';
 
 function Overview() {
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>概览</h1>
-      <p className={styles.description}>Dashboard 概览页面，将展示核心数据指标、Canvas 图表和关键业务概览。</p>
-      <div className={styles.placeholder}>📊 图表区域占位</div>
+      <div className={styles.cards}>
+        {metricCards.map((card) => (
+          <MetricCard
+            key={card.id}
+            title={card.title}
+            value={card.value}
+            change={card.change}
+            prefix={card.prefix}
+            suffix={card.suffix}
+            icon={card.icon}
+          />
+        ))}
+      </div>
+      <div className={styles.chart}>
+        <BarChart title={visitTrend.title} labels={visitTrend.labels} data={visitTrend.data} />
+      </div>
     </div>
   );
 }
